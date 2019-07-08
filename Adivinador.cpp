@@ -12,7 +12,6 @@ private:
 	Nodo* der;
 public:
 	Nodo(){ pregunta="", izq=NULL, der=NULL;}
-	Nodo(string s){ pregunta=s, izq=NULL, der=NULL;}
 	bool isLeaf(){ return izq==NULL && der== NULL;}
 	void ask(){ cout<<"¿Piensas en "<<pregunta<<"?"<<endl; }
 	friend class Arbol;
@@ -142,11 +141,6 @@ int main(){
 		cout<<"¿Quieres volver a jugar?"<<endl;
 		if(si()) cout<<endl;
 		else break;
-	}
-	ofstream out("BD.DAT", ios::binary | ios::out);
-	if(!out){
-		cerr << "No se pudo abrir el archivo de escritura" << endl;
-		return 1;
 	}
 	adivina.serialize();
 	return 0;
