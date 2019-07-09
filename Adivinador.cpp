@@ -21,7 +21,7 @@ bool si(){
 	string ans; 
 	while(1){
 		getline(cin, ans);
-		if(ans[0]!='S' || ans[0]!='s' || ans[0]=='n' || ans[0]=='N') break;
+		if(ans[0]=='S' || ans[0]=='s' || ans[0]=='n' || ans[0]=='N') break;
 		cout<< "Ingrese una respuesta válida." << endl;
 	}
 	if(ans[0]=='S' || ans[0]=='s') return 1;
